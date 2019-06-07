@@ -17,6 +17,8 @@ import java.util.regex.Pattern;
  */
 public class BlockTemplateCreator implements BlockCreator {
 
+    private static final String ERROR_MSG = "Missing block information: ";
+
     // contain all the necessary information - retrieved by reading the text
     private Map<String, String> defaultDetails;
     private Map<String, String> blockTypeDetails;
@@ -87,11 +89,11 @@ public class BlockTemplateCreator implements BlockCreator {
      * @throws NullPointerException - if the map doesn't contain the appropriate information
      */
     private void setSymbol() throws NullPointerException {
-        this.symbol = this.blockTypeDetails.get("symbol");
-    }
-
-    private void setBackgroundChange() {
-
+        try {
+            this.symbol = this.blockTypeDetails.get("symbol");
+        } catch(Exception e) {
+            throw new NullPointerException(ERROR_MSG + "'symbol'");
+        }
     }
 
     /**
@@ -111,7 +113,7 @@ public class BlockTemplateCreator implements BlockCreator {
         }
         // if the design maps are empty, meaning there is missing information, throw an exception to notify an error
         if (this.fillImages.size() == 0 && this.fillColors.size() == 0) {
-            throw new NullPointerException();
+            throw new NullPointerException(ERROR_MSG + "'fill'");
         }
     }
 
@@ -175,7 +177,12 @@ public class BlockTemplateCreator implements BlockCreator {
      * @throws NullPointerException - if both of the maps don't contain appropriate information
      */
     private void setWidth() throws NullPointerException {
-        this.width = Double.parseDouble(this.getValueFromMapsOf("width"));
+        try {
+            this.width = Double.parseDouble(this.getValueFromMapsOf("width"));
+        } catch (Exception e) {
+            throw new NullPointerException(ERROR_MSG + "'width'");
+        }
+
     }
 
     /**
@@ -185,7 +192,12 @@ public class BlockTemplateCreator implements BlockCreator {
      * @throws NullPointerException - if both of the maps don't contain appropriate information
      */
     private void setHeight() throws NullPointerException {
-        this.height = Double.parseDouble(this.getValueFromMapsOf("height"));
+        try {
+            this.height = Double.parseDouble(this.getValueFromMapsOf("height"));
+        } catch (Exception e) {
+            throw new NullPointerException(ERROR_MSG + "'height'");
+        }
+
     }
 
     /**
@@ -195,7 +207,12 @@ public class BlockTemplateCreator implements BlockCreator {
      * @throws NullPointerException - if both of the maps don't contain appropriate information
      */
     private void setHitPoints() throws NullPointerException {
-        this.hitPoints = Double.parseDouble(this.getValueFromMapsOf("hit_points"));
+        try {
+            this.hitPoints = Double.parseDouble(this.getValueFromMapsOf("hit_points"));
+        } catch (Exception e) {
+            throw new NullPointerException(ERROR_MSG + "'hit_points'");
+        }
+
     }
 
     /**

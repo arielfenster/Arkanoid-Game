@@ -50,6 +50,11 @@ public class GameAnimation implements Animation {
         if (this.levelsToPlay.isEmpty()) {
             this.levelsToPlay.addAll(this.reader.getLevels(this.difficulty));
         }
+        // if the returned value is null then there is missing information. play the default levels instead.
+        if (this.levelsToPlay == null) {
+            this.reader = new LevelSetReader("");
+            this.levelsToPlay.addAll(this.reader.getLevels(this.difficulty));
+        }
         this.game.runLevels(this.levelsToPlay);
         this.shouldAnimationStop = true;
     }
