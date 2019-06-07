@@ -85,6 +85,15 @@ END_BLOCKS
 ```
 * There is only one blocks segment. Make sure the segment starts and ends with 'START_BLOCKS' and 'END_BLOCKS', respectively. <br />
 
+### Playing your levels
+* Add your level settings and block settings to /resources/definitions/ directory.
+* Change the paths written in the 'level_sets' file to the paths of your custom files (the paths are relative to the 'resources' directory).
+* When ready, open the command line and enter the following command:
+```
+java -jar ArkanoidGame.jar path-to-your-custom-levels-definitions
+```
+
+
 ### Final Notes
 * If there is a setting that is written in the block definition and in the default values, the block definition will set the value.
 * If there is any missing information regarding the blocks or the level settings, the level cannot be created and so an error will occur, resulting in loading the default levels.
