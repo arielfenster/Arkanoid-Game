@@ -2,15 +2,15 @@
 An Arkanoid-clone game that can read different level-settings files and create the levels accordingly.
 
 ## Playing the game
-In order to play the game, download the 'ArkanoidGame.jar' file to your computer and run it. The game is played with the left and right arrows on your keyboard.
+In order to play the game, download the 'ArkanoidGame.jar' file to your computer and run it.
+The game is played with the left and right arrows on your keyboard.
 
 ## Creating your own levels
 The game is pre-programmed with default levels. However, you can create your own levels by supplying a level-settings file containing the various details needed, such as paddle speed, number of balls, blocks formation, etc.
 
 ### Custom levels
 In order to create your own levels, you need to supply a level definitions text file containing the required information.
-Multiple levels can be configured in a single file.
-For exmaple (see full details at resources/definitions/easy_level_definitions.txt):
+Multiple levels can be configured in a single file. For exmaple (see full details at resources/definitions/easy_level_definitions.txt):
 
 ```
 START_LEVEL
@@ -29,19 +29,7 @@ START_BLOCKS
 END_BLOCKS
 END_LEVEL
 ```
-
-Every level region starts and ends with the 'START_LEVEL' and 'END_LEVEL' key words, respectively.
-All of the required fields are listed above:
-
-```
-ball_velocities: angle, speed
-```
-```
-blocks_start_x / blocks_start_y: XXX - specifies the position of the first block to create, where x=0 is top of the screen and y=0 is the left side of the screen.
-```
-```
-row_height: XXX - speficies the height of the blocks
-```
+* Every level region starts and ends with the 'START_LEVEL' and 'END_LEVEL' key words, respectively.
 
 ### Custom blocks
 In addition to creating your own levels, you can design your very own gaming blocks that will be displayed.
