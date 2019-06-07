@@ -2,7 +2,7 @@
 An Arkanoid-clone game that can read different level-settings files and create the levels accordingly.
 
 ## Playing the game
-In order to play the game, download the 'ArkanoidGame.jar' file to your computer and run it.
+In order to play the game, download the 'ArkanoidGame.jar' file to your computer and run it. <br />
 The game is played with the left and right arrows on your keyboard.
 
 ## Creating your own levels
@@ -10,7 +10,8 @@ The game is pre-programmed with default levels. However, you can create your own
 
 ### Custom levels
 In order to create your own levels, you need to supply a level definitions text file containing the required information.
-Multiple levels can be configured in a single file. For exmaple (see full details at resources/definitions/easy_level_definitions.txt):
+Multiple levels can be configured in a single file. <br />
+For exmaple (see full details at resources/definitions/easy_level_definitions.txt):
 
 ```
 START_LEVEL
@@ -33,16 +34,17 @@ END_LEVEL
 
 ### Custom blocks
 In addition to creating your own levels, you can design your very own gaming blocks that will be displayed.
-Blocks settings are divided into sereval components:
-1. Default values (optional):
+Blocks settings are divided into sereval components: (see complete file at /resources/definitions/standard_block_definitions.txt)
+***1. Default values (optional):***
 ```
 '# default values for blocks
 default height:25 width:50 stroke:color(black) hit_points:1
 ```
 * Default values are shared between all types of blocks.
-* Notice that the line starts with the keyword 'default'.
+* Notice that the line starts with the keyword 'default'. <br /> <br />
 
-2. Block values:
+
+***2. Block values:***
 ```
 # block definitions
 bdef symbol:b fill:color(blue)
@@ -64,9 +66,10 @@ Different blocks can have multiple hit points, where each hit point defines a di
 bdef symbol:G hit_points:2 fill:color(lightGray) fill-2:color(gray)
 bdef symbol:l hit_points:2 fill:image(block_images/zebra.jpg) fill-2:image(block_images/leopard.jpg)
 ```
-For example, the 'G'-block is first presented as a gray block and once hit, it will change its color to light gray.
+For example, the 'G'-block is first presented as a gray block and once hit, it will change its color to light gray. <br /> <br />
 
-3. Spacers values:
+
+***3. Spacers values:***
 ```
 # spacers definitions
 sdef symbol:- width:50
@@ -78,8 +81,7 @@ START_BLOCKS
 -------r
 END_BLOCKS
 ```
-
-* There is only one blocks segment. Make sure the segment starts and ends with 'START_BLOCKS' and 'END_BLOCKS', respectively.
+* There is only one blocks segment. Make sure the segment starts and ends with 'START_BLOCKS' and 'END_BLOCKS', respectively. <br />
 
 ### Final Notes
 * If there is a setting that is written in the block definition and in the default values, the block definition will set the value.
