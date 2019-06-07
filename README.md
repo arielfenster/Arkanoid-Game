@@ -34,7 +34,9 @@ END_LEVEL
 
 ### Custom blocks
 In addition to creating your own levels, you can design your very own gaming blocks that will be displayed.
-Blocks settings are divided into sereval components: (see complete file at /resources/definitions/standard_block_definitions.txt)
+Blocks settings are divided into sereval components: (see complete file at /resources/definitions/standard_block_definitions.txt) <br /> 
+
+
 ***1. Default values (optional):***
 ```
 '# default values for blocks
