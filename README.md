@@ -2,7 +2,11 @@
 An Arkanoid-clone game that can read different level-settings files and create the levels accordingly.
 
 ## Playing the game
-In order to play the game, download the 'ArkanoidGame.jar' file to your computer and run it. <br />
+In order to play the game, download the 'ArkanoidGame.jar' file to your computer and run it:
+Open the command prompt (Windows) or terminal (Linux\OS) in the directory where you downloaded the file and enter the command:
+```
+java -jar ArkanoidGame.jar
+```
 The game is played with the left and right arrows on your keyboard.
 
 ## Creating your own levels
